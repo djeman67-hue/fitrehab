@@ -343,10 +343,7 @@ export default function FitRehabApp() {
                   ))}
                </ul>
 
-               <Button variant="gold" className="w-full py-4 text-lg shadow-xl" onClick={() => window.open('#', '_blank')}>
-                 Commencer maintenant
-               </Button>
-               <p className="text-center text-xs text-zinc-600 mt-4 uppercase tracking-widest">Places limitées</p>
+               <p className="text-center text-xs text-zinc-600 mt-2 uppercase tracking-widest">Places limitées</p>
             </div>
           </div>
         </div>
@@ -362,7 +359,7 @@ export default function FitRehabApp() {
                 <p className="text-zinc-400 mb-6">
                   Découvre mes Ebooks pour commencer à travailler en autonomie sur tes points faibles (Épaules, Dos, Genoux).
                 </p>
-                <Button variant="secondary" onClick={() => window.open('#', '_blank')}>
+                <Button variant="secondary" onClick={() => window.open('https://www.fitrehab.fr/kitgenousansdouleur', '_blank')}>
                    Voir la boutique Ebooks <BookOpen size={16} className="ml-2"/>
                 </Button>
              </div>
@@ -384,51 +381,13 @@ export default function FitRehabApp() {
           <SectionTitle title="Me Contacter" subtitle="Une question ?" />
           
           <div className="bg-zinc-900/80 backdrop-blur border border-zinc-800 p-8 md:p-12 rounded-3xl animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <form 
-              className="space-y-6" 
-              action="https://formspree.io/f/myzrngvp" 
-              method="POST"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs text-[#D4AF37] uppercase font-bold tracking-widest">Nom Complet</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    className="w-full bg-black border border-zinc-700 focus:border-red-600 text-white p-4 rounded-lg outline-none transition-colors" 
-                    placeholder="Ton nom" 
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs text-[#D4AF37] uppercase font-bold tracking-widest">Email</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    className="w-full bg-black border border-zinc-700 focus:border-red-600 text-white p-4 rounded-lg outline-none transition-colors" 
-                    placeholder="ton@email.com" 
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-xs text-[#D4AF37] uppercase font-bold tracking-widest">Message</label>
-                <textarea 
-                  rows={4} 
-                  name="message"
-                  className="w-full bg-black border border-zinc-700 focus:border-red-600 text-white p-4 rounded-lg outline-none transition-colors" 
-                  placeholder="Pose-moi ta question..."
-                  required
-                ></textarea>
-              </div>
+            <div className="space-y-6 text-center md:text-left">
+              <p className="text-zinc-300 text-lg leading-relaxed">
+                Pour toute question ou demande d&apos;infos, écris-moi directement par email ou passe par Instagram. Je réponds dès que possible.
+              </p>
+            </div>
 
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Envoyer le message
-              </Button>
-            </form>
-            
-            <div className="mt-12 flex flex-col md:flex-row items-center justify-between border-t border-zinc-800 pt-8 gap-6">
+            <div className="mt-8 flex flex-col md:flex-row items-center justify-between border-t border-zinc-800 pt-8 gap-6">
               <div className="flex items-center gap-4">
                  <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-white">
                     <Mail size={20} />
@@ -439,7 +398,12 @@ export default function FitRehabApp() {
                  </div>
               </div>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all">
+                <a 
+                  href="https://www.instagram.com/fit.rehab_/" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all"
+                >
                   <Instagram size={20} />
                 </a>
               </div>
