@@ -131,7 +131,7 @@ export default function FitRehabApp() {
 
           {/* Menu Bureau */}
           <div className="hidden md:flex gap-8 items-center">
-            {['Concept', 'Suivi', 'Ebook', 'Contact'].map((item) => (
+            {['Concept', 'Suivi', 'Protocole', 'Ebook', 'Contact'].map((item) => (
               <button 
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -152,7 +152,7 @@ export default function FitRehabApp() {
         {/* Menu Mobile Déroulant */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800 p-6 flex flex-col gap-4 animate-slideDown">
-            {['Concept', 'Suivi', 'Ebook', 'Contact'].map((item) => (
+            {['Concept', 'Suivi', 'Protocole', 'Ebook', 'Contact'].map((item) => (
               <button 
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -341,6 +341,123 @@ export default function FitRehabApp() {
                </ul>
 
                <p className="text-center text-xs text-zinc-600 mt-2 uppercase tracking-widest">Places limitées</p>
+           </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION PROTOCOLE GENOU / SQUAT */}
+      <section id="protocole" className="py-24 bg-gradient-to-b from-zinc-950 via-black to-black border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <SectionTitle title="Protocole Genou / Squat" subtitle="Offre dédiée" />
+
+          <div className="grid lg:grid-cols-3 gap-10 items-start">
+            <div className="lg:col-span-2 space-y-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <div className="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-6 space-y-4">
+                <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold">Promesse & Cible</div>
+                <h3 className="text-2xl font-black italic uppercase leading-tight">Retrouver un squat sans douleur, sans arrêter le CrossFit</h3>
+                <p className="text-zinc-300">
+                  Pensé pour les crossfiteurs gênés au genou sur les squats, l&apos;haltéro, la course ou les sauts. On remet ton genou en charge progressivement, sans t&apos;obliger à sortir de la box ni à stopper les WOD.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black/40 border border-zinc-800 rounded-xl p-4 flex gap-3">
+                    <div className="p-2 bg-red-900/30 rounded-lg"><ShieldCheck className="text-[#D4AF37]" size={22} /></div>
+                    <div>
+                      <div className="text-xs uppercase text-zinc-400 font-bold">Autorité</div>
+                      <p className="text-white font-semibold">Jérémy, kiné du sport depuis 2010, crossfiteur depuis 2017, opéré du genou.</p>
+                    </div>
+                  </div>
+                  <div className="bg-black/40 border border-zinc-800 rounded-xl p-4 flex gap-3">
+                    <div className="p-2 bg-green-900/30 rounded-lg"><Trophy className="text-white" size={22} /></div>
+                    <div>
+                      <div className="text-xs uppercase text-zinc-400 font-bold">Preuve sociale</div>
+                      <p className="text-white font-semibold">300+ athlètes accompagnés, compétiteurs et profils avec tendinopathies chroniques.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-black/50 border border-zinc-800 rounded-2xl p-6 space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-red-900/40 border border-red-700 flex items-center justify-center font-black text-red-300">4</div>
+                  <div>
+                    <div className="text-xs uppercase text-zinc-400 font-bold">Structure du protocole</div>
+                    <h4 className="text-lg font-bold text-white">Phases claires, 30 min avant le WOD</h4>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {[
+                    { step: "1", title: "Diminution de la douleur", desc: "Isométriques et positions contrôlées pour calmer l'inflammation." },
+                    { step: "2", title: "Renforcement progressif", desc: "Excentriques et travail ciblé pour sécuriser genou et hanches." },
+                    { step: "3", title: "Retour aux polyarticulaires", desc: "Réintroduction guidée des squats et fentes sans appréhension." },
+                    { step: "4", title: "Reprise haltéro & mouvements clés", desc: "Charge ajustée, sauts et course reprogrammés avec repères." },
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-3 items-start">
+                      <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700 flex items-center justify-center font-black text-[#D4AF37]">{item.step}</div>
+                      <div>
+                        <h5 className="text-white font-semibold uppercase text-sm">{item.title}</h5>
+                        <p className="text-zinc-400 text-sm">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-zinc-500">Vidéo à chaque exercice, consignes de charge, ajustements des mouvements problématiques. Pas de PDF ni de tableur à rallonge.</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-5 space-y-3">
+                  <div className="text-xs uppercase text-[#D4AF37] font-bold">Contenu & Accompagnement</div>
+                  <ul className="space-y-2">
+                    {[
+                      "4 mois d'accompagnement + mises à jour et accès à vie",
+                      "Programmation guidée via l'application : tout est déjà planifié",
+                      "Webinaires mensuels + replays pour corriger en direct",
+                      "Groupe WhatsApp privé, réponses sous 24–48 h",
+                      "Adaptations des mouvements et WOD de réhab genou inclus"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-zinc-300 text-sm">
+                        <CheckCircle2 className="text-green-500 shrink-0 mt-0.5" size={18} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-black/50 border border-zinc-800 rounded-2xl p-5 space-y-3">
+                  <div className="text-xs uppercase text-[#D4AF37] font-bold">Résultats partagés</div>
+                  <p className="text-white font-semibold italic">“J&apos;ai repris l&apos;haltéro et les double unders sans douleur.” — compète CF</p>
+                  <p className="text-zinc-300 text-sm italic">“Tendinopathie rotulienne : squat à 120 kg à nouveau, sans appréhension.”</p>
+                  <p className="text-zinc-400 text-sm">Des athlètes chroniques, post-opératoires ou en préparation compétitive ont déjà relancé leurs charges sans flare-up.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-150">
+              <div className="bg-zinc-950 border border-[#D4AF37]/70 rounded-2xl p-8 shadow-[0_0_40px_rgba(212,175,55,0.08)] relative overflow-hidden">
+                <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-12 -left-8 w-40 h-40 bg-red-600/10 rounded-full blur-3xl"></div>
+                
+                <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-bold mb-2">Tarif actuel</div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-5xl font-black text-[#D4AF37]">399€</span>
+                </div>
+                <p className="text-zinc-300 mb-4">Pack complet 4 mois + accès à vie, webinaires, groupe privé et adaptations personnalisées.</p>
+                <ul className="space-y-2 text-sm text-zinc-300 mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={18} /> Application incluse, zéro tableur</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={18} /> Réponses sous 24–48 h</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={18} /> Bonus WOD de réhab genou</li>
+                </ul>
+                <div className="bg-red-900/30 border border-red-800 rounded-xl p-4 text-sm text-red-100 mb-6 flex items-start gap-3">
+                  <AlertTriangle size={18} className="mt-0.5" />
+                  <p>Attendre = douleur chronique, perte de charge et frustrations en compète. Agis maintenant pour garder tes performances.</p>
+                </div>
+                <Button variant="gold" className="w-full" onClick={() => window.open('https://www.fitrehab.fr/squatsansdouleur', '_blank')}>
+                  Réserve ta place <ChevronRight size={16} />
+                </Button>
+                <p className="text-[11px] text-zinc-500 uppercase tracking-[0.18em] text-center mt-4">Places limitées - paiement sécurisé</p>
+                <div className="mt-4 text-xs text-zinc-500">
+                  <p>Moins cher qu&apos;une infiltration + séances d&apos;ostéo + attelle + pistolet de massage cumulés.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
