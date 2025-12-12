@@ -495,32 +495,21 @@ export default function FitRehabApp() {
           <SectionTitle title="Me Contacter" subtitle="Une question ?" />
           
           <div className="bg-zinc-900/80 backdrop-blur border border-zinc-800 p-8 md:p-12 rounded-3xl animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-6 text-center">
               <p className="text-zinc-300 text-lg leading-relaxed">
-                Pour toute question ou demande d&apos;infos, écris-moi directement par email ou passe par Instagram. Je réponds dès que possible.
+                Pour toute question ou demande d&apos;infos, écris-moi directement sur Instagram. Je réponds dès que possible.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-col md:flex-row items-center justify-between border-t border-zinc-800 pt-8 gap-6">
-              <div className="flex items-center gap-4">
-                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-white">
-                    <Mail size={20} />
-                 </div>
-                 <div>
-                   <div className="text-sm text-zinc-400">Email Direct</div>
-                   <div className="font-bold">contact@fitrehab.fr</div>
-                 </div>
-              </div>
-              <div className="flex gap-4">
-                <a 
-                  href="https://www.instagram.com/fit.rehab_/" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all"
-                >
-                  <Instagram size={20} />
-                </a>
-              </div>
+            <div className="mt-8 flex items-center justify-center border-t border-zinc-800 pt-8">
+              <a 
+                href="https://www.instagram.com/fit.rehab_/" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="w-14 h-14 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all"
+              >
+                <Instagram size={22} />
+              </a>
             </div>
           </div>
         </div>
